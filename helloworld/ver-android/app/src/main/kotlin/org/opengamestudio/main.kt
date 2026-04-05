@@ -6,6 +6,12 @@ typealias MC = MainContext
 
 object MainComponent {
     init {
+        val vm = VM
+        val oneliners = arrayOf(
+            F.isVisible, { c: MC -> vm.mainIsVisible.value = c.isVisible },
+            F.greetingText, { c: MC -> vm.mainGreetingText.value = c.greetingText },
+        )
+        registerOneliners(mainCtrl(), oneliners)
     }
 
     fun setup() {
