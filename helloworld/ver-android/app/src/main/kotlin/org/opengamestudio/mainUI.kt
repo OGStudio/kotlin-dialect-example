@@ -34,7 +34,7 @@ fun MainView(
                 Text(vm.mainGreetingText.value)
                 Spacer(modifier = Modifier.height(10.dp))
                 OutlinedButton(
-                    onClick = { mainSet(F.didClickChangeText, true) },
+                    onClick = { mainSet("didClickChangeText", true) },
                 ) {
                     Text("Change text")
                 }
