@@ -14,7 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import org.intellij.lang.annotations.JdkConstants
+//import org.intellij.lang.annotations.JdkConstants
 
 @Composable
 fun MainView(
@@ -31,15 +31,7 @@ fun MainView(
             contentAlignment = Alignment.Center,
             modifier = Modifier.fillMaxSize()
         ) {
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(vm.mainGreetingText.value)
-                Spacer(modifier = Modifier.height(10.dp))
-                OutlinedButton(
-                    onClick = { mainSet(F.didClickChangeText, true) },
-                ) {
-                    Text("Change text")
-                }
-            }
+            Text("Hello world")
         }
     }
 }
