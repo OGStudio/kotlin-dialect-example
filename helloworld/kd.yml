@@ -3,6 +3,10 @@ version: 3
 output:
     ver-android/app/src/main/kotlin/org/opengamestudio/ignore.kd.kt:
         type: kotlin
+    ver-mac-x64/src/ignore.kd.h:
+        type: c++hdr
+    ver-mac-x64/src/ignore.kd.cpp:
+        type: c++src
 
 kotlin: package org.opengamestudio
 
