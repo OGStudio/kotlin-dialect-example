@@ -27,3 +27,14 @@ Instructions:
 | 2 | Go to `helloworld` directory | `cd helloworld` |
 | 3 | Build the application | `./util/build-mac-x64` |
 | 4 | Launch the application | `./util/launch-mac-x64`|
+
+# Windows
+
+TODO: Demo
+
+Prerequisites:
+
+* Install MSYS2
+* pacman -S zip
+* Install SDKMAN
+
