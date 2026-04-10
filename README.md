@@ -2,6 +2,8 @@
 
 ## Android
 
+https://github.com/user-attachments/assets/e85859bd-7da8-46c3-9726-51f4e220ee4e
+
 | № | Step | Details |
 |---|---   |---      |
 | 1 | Open a terminal | |
