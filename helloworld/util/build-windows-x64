@@ -9,6 +9,6 @@ $SDIR/gen-kd
 
 STEP=0
 source $T/copyDesktopSDK
-#source $T/copyWindowsSrc
+source $T/copyWindowsSrc
 #source $T/buildDesktopSDK
 #source $T/buildDesktop
