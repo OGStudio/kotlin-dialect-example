@@ -27,7 +27,7 @@ qt_add_qml_module(
 
 # SDK
 add_library(hw SHARED IMPORTED)
-set_target_properties(hw PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/../sdk-windows-x64/hw/build/bin/native/releaseShared/libhw.dll)
+set_target_properties(hw PROPERTIES IMPORTED_IMPLIB ${CMAKE_SOURCE_DIR}/../sdk-windows-x64/hw/build/bin/native/releaseShared/libhw.lib)
 target_include_directories(hwW64 PRIVATE ${CMAKE_SOURCE_DIR}/../sdk-window-x64/hw/build/bin/native/releaseShared)
 
 # Линкуем
