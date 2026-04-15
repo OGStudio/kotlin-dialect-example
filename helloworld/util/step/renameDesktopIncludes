@@ -10,8 +10,8 @@ DST=$SDIR/../ver-$DESKTOP/src
 # https://stackoverflow.com/a/1521470/3404710
 cat $FILES | while read file || [[ -n $file ]]; do
     echo $file
-    cat $HEADERS | while read header || [[ -n $header ]]; do
-        echo "replace $DST/ignore.$file \"#include \"$header\" \"#include \"ignore\.$header\""
-        #replace $DST/ignore.$file "#include \"$header" "#include \"ignore\.$header"
+    cat $HEADERS | while read h || [[ -n $h ]]; do
+        #echo "replace $DST/ignore.$file \"#include \"$header\" \"#include \"ignore\.$header\""
+        replace $DST/ignore.$file "include \"$h" "include \"ignore.$h"
     done
 done
