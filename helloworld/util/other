@@ -14,7 +14,6 @@ function replace {
     was=$2
     now=$3
     cmd="sed -i.backup 's|$was|$now|g' $file"
-    echo $cmd
     eval "$cmd"
     rm $file.backup
 }
