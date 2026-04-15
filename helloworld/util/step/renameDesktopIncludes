@@ -9,8 +9,9 @@ DST=$SDIR/../ver-$DESKTOP/src
 # https://stackoverflow.com/a/1521470/3404710
 cat $FILES | while read file || [[ -n $file ]]; do
     echo $file
+    fileName=$DST/ignore.$file
     # 1. Replace
-    replace $DST/ignore.$file "include \"" "include \"ignore."
+    replace $fileName "include \"" "include \"ignore."
     # 2. Revert corner case
-    replace $DST/ignore.$file "include \"ignore.ignore.kd" "include \"ignore.kd"
+    replace $fileName "include \"ignore.ignore.kd" "include \"ignore.kd"
 done
