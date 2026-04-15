@@ -8,9 +8,11 @@ DESKTOP=windows-x64
 $SDIR/gen-kd
 
 STEP=0
+# SDK
 source $T/copyDesktopSDK
-source $T/copyWindowsSrc
 source $T/buildDesktopSDK
 source $T/genWindowsLib hw
+# App
+source $T/copyDesktopSrc
 source $T/renameDesktopIncludes
 source $T/buildDesktop
