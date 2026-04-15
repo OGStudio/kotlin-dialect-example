@@ -4,14 +4,10 @@ STEP=$((STEP+1))
 echo -e "\n> > > > Step №$STEP. Rename Desktop includes: $DESKTOP"
 
 FILES=$SDIR/../copy-desktop.txt
-HEADERS=$SDIR/../desktop-headers.txt
 DST=$SDIR/../ver-$DESKTOP/src
 
 # https://stackoverflow.com/a/1521470/3404710
 cat $FILES | while read file || [[ -n $file ]]; do
     echo $file
-    cat $HEADERS | while read h || [[ -n $h ]]; do
-        #echo "replace $DST/ignore.$file \"#include \"$header\" \"#include \"ignore\.$header\""
-        replace $DST/ignore.$file "include \"$h" "include \"ignore.$h"
-    done
+    replace $DST/ignore.$file "include \"" "include \"ignore."
 done
