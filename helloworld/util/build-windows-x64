@@ -12,4 +12,5 @@ source $T/copyDesktopSDK
 source $T/copyWindowsSrc
 source $T/buildDesktopSDK
 source $T/genWindowsLib hw
+source $T/renameDesktopIncludes
 source $T/buildDesktop

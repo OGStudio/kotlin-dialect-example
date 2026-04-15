@@ -1,0 +1,13 @@
+#!/bin/bash
+
+STEP=$((STEP+1))
+echo -e "\n> > > > Step №$STEP. Rename Desktop includes: $DESKTOP"
+
+FILE=$SDIR/../copy-windows.txt
+DST=$SDIR/../ver-$DESKTOP/src
+
+# https://stackoverflow.com/a/1521470/3404710
+cat $FILE | while read ln || [[ -n $ln ]]; do
+    echo $ln
+    replace $DST/ignore.$ln "#include \"" "#include \"ignore\."
+done
