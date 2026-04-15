@@ -11,6 +11,6 @@ DST=$SDIR/../ver-$DESKTOP/src
 cat $FILES | while read file || [[ -n $file ]]; do
     echo $file
     cat $HEADERS | while read header || [[ -n $header ]]; do
-        replace $DST/ignore.$ln "#include \"$header" "#include \"ignore\.$header"
+        replace $DST/ignore.$file "#include \"$header" "#include \"ignore\.$header"
     done
 done
