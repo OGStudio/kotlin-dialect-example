@@ -20,3 +20,4 @@ done
 # Replace inside generated files
 replace $DST/ignore.kd.h "include \"" "include \"ignore."
 replace $DST/ignore.kd.cpp "include \"" "include \"ignore."
+replace $DST/ignore.kd.cpp "include \"ignore.ignore.kd" "include \"ignore.kd"
