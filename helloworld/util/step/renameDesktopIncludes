@@ -15,3 +15,7 @@ cat $FILES | while read file || [[ -n $file ]]; do
     # 2. Revert corner case
     replace $fileName "include \"ignore.ignore.kd" "include \"ignore.kd"
 done
+
+# Replace inside generated files
+replace $DST/ignore.kd.h "include \"" "include \"ignore."
+replace $DST/ignore.kd.cpp "include \"" "include \"ignore."
