@@ -1,9 +1,9 @@
 #!/bin/bash
 
 STEP=$((STEP+1))
-echo -e "\n> > > > Step №$STEP. Copy source files to Desktop: $DESKTOP"
+echo -e "\n> > > > Step №$STEP. Copy source files for $DESKTOP"
 
-FILES=$SDIR/../copy-desktop.txt
+FILES=$SDIR/../copy-windows.txt
 SRC=$SDIR/../ver-mac-x64/src
 DST=$SDIR/../ver-$DESKTOP/src
 
