@@ -8,21 +8,21 @@ qt_standard_project_setup(REQUIRES 6.8)
 # Приложение
 set(
     SOURCES
-    src/ignore.App.cpp
-    src/ignore.main.cpp
+    src/App.cpp
+    src/main.cpp
     src/ignore.kd.cpp
-    src/ignore.VM.cpp
+    src/VM.cpp
 )
 qt_wrap_cpp(
     SOURCES
     src/ignore.kd.h
-    src/ignore.VM.h
+    src/VM.h
 )
 qt_add_executable(hwW64 ${SOURCES})
 qt_add_qml_module(
   hwW64
   URI helloworld
-  QML_FILES src/ignore.AppView.qml
+  QML_FILES src/AppView.qml
 )
 
 # SDK
