@@ -8,7 +8,7 @@ SRC=$SDIR/../ver-mac-x64/src
 DST=$SDIR/../ver-$DESKTOP/src
 
 # https://stackoverflow.com/a/1521470/3404710
-cat $FILES | while read ln || [[ -n $ln ]]; do
-    echo $ln
-    cp $SRC/$ln $DST/ignore.$ln
+cat $FILES | while read file || [[ -n $file ]]; do
+    echo $file
+    cp $SRC/$file $DST/$file
 done
