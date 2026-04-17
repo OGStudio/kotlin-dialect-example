@@ -34,6 +34,7 @@ target_include_directories(
     hwM64
     PRIVATE
     ${CMAKE_SOURCE_DIR}/../sdk-mac-x64/hw/build/bin/native/releaseShared
+    src
     src/main
 )
 
