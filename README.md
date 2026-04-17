@@ -40,7 +40,7 @@ Instructions (Intel):
 
 # Windows
 
-TODO: Demo
+https://github.com/user-attachments/assets/23fcec69-a936-4a6f-bbc3-f20f6a3b55bb
 
 Prerequisites:
 
