@@ -1,3 +1,3 @@
-mainFun.kt
-mainProto.kt
+main/mainFun.kt
+main/mainProto.kt
 other.kt
