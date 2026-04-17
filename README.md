@@ -25,9 +25,9 @@ https://github.com/user-attachments/assets/4b940da3-4c5c-4e2f-a057-7d8e925489ca
 
 Prerequisites:
 
-* Xcode
 * cmake
 * Qt6
+* Xcode
 
 Instructions (Intel):
 
