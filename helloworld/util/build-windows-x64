@@ -9,7 +9,7 @@ $SDIR/gen-kd
 
 STEP=0
 # SDK
-source $T/copyDesktopSDK
+source $T/copyWindowsSDK
 source $T/buildDesktopSDK
 source $T/genWindowsLib hw
 # App
