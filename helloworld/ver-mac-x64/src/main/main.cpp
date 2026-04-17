@@ -5,7 +5,7 @@
 #include "main.h"
 #include "ignore.kd.h"
 
-#define CB(code) std::make_any<std::function<void(MainContext)>>([&](MainContext c) { code })
+#define CB(code) std::make_any<std::function<void(HWContext)>>([&](MainContext c) { code })
 #define VM VM::singleton()
 
 

@@ -9,9 +9,9 @@ qt_standard_project_setup(REQUIRES 6.8)
 set(
     SOURCES
     src/App.cpp
-    src/main.cpp
     src/ignore.kd.cpp
     src/VM.cpp
+    src/main/main.cpp
 )
 qt_wrap_cpp(
     SOURCES
@@ -20,15 +20,22 @@ qt_wrap_cpp(
 )
 qt_add_executable(hwM64 ${SOURCES})
 qt_add_qml_module(
-  hwM64
-  URI helloworld
-  QML_FILES src/AppView.qml
+    hwM64
+    URI helloworld
+    QML_FILES
+    src/AppView.qml
+    src/main/MainView.qml
 )
 
 # SDK
 add_library(hw SHARED IMPORTED)
 set_target_properties(hw PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/../sdk-mac-x64/hw/build/bin/native/releaseShared/libhw.dylib)
-target_include_directories(hwM64 PRIVATE ${CMAKE_SOURCE_DIR}/../sdk-mac-x64/hw/build/bin/native/releaseShared)
+target_include_directories(
+    hwM64
+    PRIVATE
+    ${CMAKE_SOURCE_DIR}/../sdk-mac-x64/hw/build/bin/native/releaseShared
+    src/main
+)
 
 # Линкуем
 target_link_libraries(hwM64 PRIVATE Qt6::Quick hw)
