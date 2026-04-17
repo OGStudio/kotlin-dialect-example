@@ -54,7 +54,7 @@ Instructions:
 
 | № | Step | Example |
 |---|---   |---      |
-| 1 | Open a terminal | |
+| 1 | Open MSYS2 MINGW64 terminal | |
 | 2 | Go to `helloworld` directory | `cd helloworld` |
 | 3 | Build the application | `./util/build-windows-x64` |
 | 4 | Launch the application | `./util/launch-windows-x64`|
