@@ -1,8 +1,0 @@
-App.cpp
-AppView.qml
-KT.h
-main/main.h
-main/main.cpp
-main/MainView.qml
-VM.h
-VM.cpp
