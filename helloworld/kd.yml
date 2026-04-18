@@ -25,5 +25,6 @@ MainContext:
     fields:
         didClickChangeText: Bool
         didLaunch: Bool
+        didSetup: Bool
         greetingText: String
         isVisible: Bool

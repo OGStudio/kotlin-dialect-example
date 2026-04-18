@@ -2,25 +2,45 @@ package org.opengamestudio
 
 //<!-- Shoulds -->
 
+// Launch only once
+//
+// Purpose: Work around Android's activity restart
+//
+// Conditions:
+// 1. UI has been created the first time
+fun mainShouldLaunch(c: MainContext): MainContext {
+    if (
+        c.recentField == F.didSetup &&
+        !c.didSetup
+    ) {
+        c.didLaunch = true
+        c.recentField = F.didLaunch
+        return c
+    }
+
+    c.recentField = F.none
+    return c
+}
+
 // Specify greeting text
 //
 // Conditions:
 // 1. Did launch
 // 2. Did click `Change text` button
 fun mainShouldResetGreetingText(c: MainContext): MainContext {
-    if (c.recentField == "didLaunch") {
+    if (c.recentField == F.didLaunch) {
         c.greetingText = "Hello, World!"
-        c.recentField = "greetingText"
+        c.recentField = F.greetingText
         return c
     }
 
-    if (c.recentField == "didClickChangeText") {
+    if (c.recentField == F.didClickChangeText) {
         c.greetingText = "Умом Россию не понять!"
-        c.recentField = "greetingText"
+        c.recentField = F.greetingText
         return c
     }
 
-    c.recentField = "none"
+    c.recentField = F.none
     return c
 }
 
@@ -29,13 +49,13 @@ fun mainShouldResetGreetingText(c: MainContext): MainContext {
 // Conditions:
 // 1. Did launch
 fun mainShouldResetVisibility(c: MainContext): MainContext {
-    if (c.recentField == "didLaunch") {
+    if (c.recentField == F.didLaunch) {
         c.isVisible = true
-        c.recentField = "isVisible"
+        c.recentField = F.isVisible
         return c
     }
 
-    c.recentField = "none"
+    c.recentField = F.none
     return c
 }
 
