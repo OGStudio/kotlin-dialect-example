@@ -17,6 +17,6 @@ MainComponent::MainComponent() {
     MainEffectRegistry::registerOneliners(KT.mainCtrl(), oneliners);
 }
 
-void MainComponent::launch() {
-    mainSet(F.didLaunch, true);
+void MainComponent::setup() {
+    mainSet(F.didSetup, true);
 }

@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
     FObj fobj;
     // Create and launch components
     MainComponent m;
-    m.launch();
+    m.setup();
 
     // Configure and load QML
     engine.rootContext()->setContextProperty("api", &api);

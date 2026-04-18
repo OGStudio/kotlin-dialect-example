@@ -9,7 +9,7 @@
 class MainComponent {
     public:
         MainComponent();
-        void launch();
+        void setup();
 };
 
 #endif // HW_MAIN_H
