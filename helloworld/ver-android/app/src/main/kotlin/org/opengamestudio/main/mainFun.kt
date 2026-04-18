@@ -11,7 +11,7 @@ package org.opengamestudio
 fun mainShouldLaunch(c: MainContext): MainContext {
     if (
         c.recentField == F.didSetup &&
-        !c.didSetup
+        !c.didLaunch
     ) {
         c.didLaunch = true
         c.recentField = F.didLaunch
