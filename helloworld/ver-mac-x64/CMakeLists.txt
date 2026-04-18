@@ -38,5 +38,5 @@ target_include_directories(
     src/main
 )
 
-# Линкуем
+# Link
 target_link_libraries(hwM64 PRIVATE Qt6::Quick hw)
