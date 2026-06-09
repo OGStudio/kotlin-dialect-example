@@ -1,6 +1,13 @@
-# Hello World
+# Kotlin Dialect examples
 
-## Android
+This repository contains example project to showcase how Kotlin Dialect
+application looks like
+
+## Hello world
+
+This example depicts how to alter text on button clicks
+
+### Android
 
 https://github.com/user-attachments/assets/e85859bd-7da8-46c3-9726-51f4e220ee4e
 
@@ -19,7 +26,7 @@ Instructions:
 | 5 | Open `helloworld/ver-android` project | |
 | 6 | Press Run | |
 
-# macOS
+### macOS
 
 https://github.com/user-attachments/assets/4b940da3-4c5c-4e2f-a057-7d8e925489ca
 
@@ -38,7 +45,7 @@ Instructions (Intel):
 | 3 | Build the application | `./util/build-mac-x64` |
 | 4 | Launch the application | `./util/launch-mac-x64`|
 
-# Windows
+### Windows
 
 https://github.com/user-attachments/assets/23fcec69-a936-4a6f-bbc3-f20f6a3b55bb
 
