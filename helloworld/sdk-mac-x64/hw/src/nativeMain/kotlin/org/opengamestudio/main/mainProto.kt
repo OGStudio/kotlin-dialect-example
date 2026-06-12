@@ -1,1 +1,1 @@
-../../../../../../../../ver-android/app/src/main/kotlin/org/opengamestudio/main/mainProto.kt
+../../../../../../../../components/main/sdk/mainProto.kt
