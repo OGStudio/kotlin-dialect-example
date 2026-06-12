@@ -1,6 +1,7 @@
-#include <QGuiApplication>
+#include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QQuickStyle>
 
 #include "ignore.kd.h"
 #include "main.h"
@@ -8,7 +9,8 @@
 
 int main(int argc, char *argv[]) {
     // Create Qt application
-    QGuiApplication app(argc, argv);
+    QQuickStyle::setStyle("Fusion");
+    QApplication app(argc, argv);
     QQmlApplicationEngine engine;
     QObject::connect(
         &engine,
