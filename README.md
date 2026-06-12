@@ -51,6 +51,7 @@ https://github.com/user-attachments/assets/23fcec69-a936-4a6f-bbc3-f20f6a3b55bb
 
 Prerequisites:
 
+* Windows 11 with symlinks set up
 * cmake
 * MSYS2
 * OpenJDK
