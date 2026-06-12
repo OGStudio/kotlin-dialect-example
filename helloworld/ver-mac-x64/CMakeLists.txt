@@ -30,8 +30,8 @@ qt_add_qml_module(
     hwM64
     URI helloworld
     QML_FILES
-    src/main/MainView.qml
-    src/other/AppView.qml
+    src/main/view/MainView.qml
+    src/other/view/AppView.qml
 )
 
 # SDK
