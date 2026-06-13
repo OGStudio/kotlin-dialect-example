@@ -55,7 +55,7 @@ Prerequisites:
 * cmake
 * MSYS2
 * OpenJDK
-* Qt6
+* [Qt6](https://wiki.qt.io/MSYS2)
 * rsync
 
 Instructions:
