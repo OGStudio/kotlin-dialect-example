@@ -51,17 +51,19 @@ https://github.com/user-attachments/assets/23fcec69-a936-4a6f-bbc3-f20f6a3b55bb
 
 Prerequisites:
 
-* Windows 11 with symlinks set up
-* cmake
-* MSYS2
-* OpenJDK
-* [Qt6](https://wiki.qt.io/MSYS2)
+| № | Prerequisite | Details |
+| --- | --- | --- |
+| 1 | Windows 11 | Configure symlinks: <br>1. Add to `~/.bashprofile`: `export MSYS="winsymlinks:nativestrict"` <br>2. Clone with symlink support: `git clone -c core.symlinks=true <repository-url>` |
+| 2 | [MSYS2](https://www.msys2.org) | UCRT shell |
+| 3 | [Qt6](https://wiki.qt.io/MSYS2) | `pacman -S mingw-w64-ucrt-x86_64-qt-creator` |
+| 4 | cmake | `pacman -S mingw.....` |
+| 5 | OpenJDK | `pacman -S ????` |
 
 Instructions:
 
 | № | Step | Example |
 |---|---   |---      |
-| 1 | Open MSYS2 MINGW64 terminal | |
+| 1 | Open MSYS2 UCRT terminal | |
 | 2 | Go to `helloworld` directory | `cd helloworld` |
 | 3 | Build the application | `./util/build-windows-x64` |
 | 4 | Launch the application | `./util/launch-windows-x64`|
