@@ -56,7 +56,6 @@ Prerequisites:
 * MSYS2
 * OpenJDK
 * [Qt6](https://wiki.qt.io/MSYS2)
-* rsync
 
 Instructions:
 
