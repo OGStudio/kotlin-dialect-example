@@ -53,17 +53,19 @@ Prerequisites:
 
 | № | Prerequisite | Details |
 | --- | --- | --- |
-| 1 | Windows 11 | Configure symlinks: <br>1. Add to `~/.bash_profile`: `export MSYS="winsymlinks:nativestrict"` <br>2. Clone with symlink support: `git clone -c core.symlinks=true <repository-url>` |
+| 1 | Windows 11 | Configure symlinks: <br>1. Add to `~/.bash_profile`: `export MSYS="winsymlinks:nativestrict"` <br>2. Clone Kotlin dialect example repository with symlink support: `git clone -c core.symlinks=true github.com/OGStudio/kotlin-dialect-example` |
 | 2 | [MSYS2](https://www.msys2.org) | Use UCRT64 shell |
 | 3 | [Qt6](https://wiki.qt.io/MSYS2) | `pacman -S mingw-w64-ucrt-x86_64-qt-creator` |
 | 4 | cmake | `pacman -S mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-ninja` |
-| 5 | [OpenJDK](https://jdk.java.net/archive) | Install and unpack 21.0.2 version to `C:`, thenadd to `~/.bash_profile`: `export PATH="$PATH:/c/jdk-21.0.2"` |
+| 5 | Node.js | `pacman -S mingw-w64-ucrt-x86_64-nodejs` |
+| 6 | dlltool | `pacman -S mingw-w64-ucrt-x86_64-toolchain` |
+| 7 | [OpenJDK](https://jdk.java.net/archive) | Install and unpack 21.0.2 version to `C:`, thenadd to `~/.bash_profile`: `export PATH="$PATH:/c/jdk-21.0.2"` |
 
 Instructions:
 
 | № | Step | Example |
 |---|---   |---      |
-| 1 | Open MSYS2 UCRT terminal | |
+| 1 | Open MSYS2 UCRT terminal as administrator | Make sure you cloned the repository with `-c core.symlinks=true`|
 | 2 | Go to `helloworld` directory | `cd helloworld` |
 | 3 | Build the application | `./util/build-windows-x64` |
 | 4 | Launch the application | `./util/launch-windows-x64`|
