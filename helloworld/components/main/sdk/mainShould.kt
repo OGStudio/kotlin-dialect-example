@@ -1,7 +1,5 @@
 package org.opengamestudio
 
-//<!-- Shoulds -->
-
 // Launch only once
 //
 // Purpose: Work around Android's activity restart
@@ -9,7 +7,7 @@ package org.opengamestudio
 // Conditions:
 // 1. UI has been created the first time
 fun mainShouldLaunch(c: MainContext): MainContext {
-    if (
+    /* 1 */ if (
         c.recentField == F.didSetup &&
         !c.didLaunch
     ) {
@@ -28,13 +26,13 @@ fun mainShouldLaunch(c: MainContext): MainContext {
 // 1. Did launch
 // 2. Did click `Change text` button
 fun mainShouldResetGreetingText(c: MainContext): MainContext {
-    if (c.recentField == F.didLaunch) {
+    /* 1 */ if (c.recentField == F.didLaunch) {
         c.greetingText = "Hello, World!"
         c.recentField = F.greetingText
         return c
     }
 
-    if (c.recentField == F.didClickChangeText) {
+    /* 2 */ if (c.recentField == F.didClickChangeText) {
         c.greetingText = "Умом Россию не понять!"
         c.recentField = F.greetingText
         return c
@@ -49,7 +47,7 @@ fun mainShouldResetGreetingText(c: MainContext): MainContext {
 // Conditions:
 // 1. Did launch
 fun mainShouldResetVisibility(c: MainContext): MainContext {
-    if (c.recentField == F.didLaunch) {
+    /* 1 */ if (c.recentField == F.didLaunch) {
         c.isVisible = true
         c.recentField = F.isVisible
         return c
@@ -57,22 +55,4 @@ fun mainShouldResetVisibility(c: MainContext): MainContext {
 
     c.recentField = F.none
     return c
-}
-
-//<!-- Other functions -->
-
-fun mainCtrl(): KDController {
-    return MainProto.ctrl
-}
-
-fun mainCtrlCtx(): MainContext {
-    return MainProto.ctrl.context as MainContext
-}
-
-fun mainCtrlCtxField(): String {
-    return MainProto.ctrl.context.recentField
-}
-
-fun mainSet(k: String, v: Any) {
-    MainProto.ctrl.set(k, v)
 }

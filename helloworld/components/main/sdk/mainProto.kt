@@ -15,3 +15,19 @@ object MainProto {
         }
     }
 }
+
+fun mainCtrl(): KDController {
+    return MainProto.ctrl
+}
+
+fun mainCtrlCtx(): MainContext {
+    return MainProto.ctrl.context as MainContext
+}
+
+fun mainCtrlCtxField(): String {
+    return MainProto.ctrl.context.recentField
+}
+
+fun mainSet(k: String, v: Any) {
+    MainProto.ctrl.set(k, v)
+}
