@@ -12,7 +12,7 @@ class MainActivity: ComponentActivity() {
         enableEdgeToEdge()
 
         VM.androidContext = this
-        // Launch components after specifying Android Context.
+        // Launch components once VM has Android Context
         MainComponent.setup()
 
         setContent {
