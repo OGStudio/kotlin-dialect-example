@@ -10,7 +10,7 @@ find_package(
     QuickControls2
     Widgets
 )
-qt_standard_project_setup(REQUIRES 6.8)
+qt_standard_project_setup(REQUIRES 6.0)
 
 # Приложение
 set(
