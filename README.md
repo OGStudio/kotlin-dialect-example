@@ -39,6 +39,7 @@ Prerequisites:
 | 3 | Qt6 | `sudo apt install qt6-declarative-dev` |
 | 4 | CMake | `sudo apt install cmake` |
 | 5 | Node.js | `sudo apt install nodejs` |
+| 6 | OpenJDK | `sudo apt install openjdk-21-jdk` |
 
 ### macOS
 
