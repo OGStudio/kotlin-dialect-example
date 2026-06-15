@@ -26,6 +26,20 @@ Instructions:
 | 5 | Open `helloworld/ver-android` project | |
 | 6 | Press Run | |
 
+### Linux
+
+TODO: Video
+
+Prerequisites:
+
+| № | Prerequisite | Details |
+| --- | --- | --- |
+| 1 | Ubuntu-based distribution | Tested on Lubuntu 22.04 |
+| 2 | GCC | `sudo apt install build-essential` |
+| 3 | Qt6 | `sudo apt install qt6-declarative-dev` |
+| 4 | CMake | `sudo apt install cmake` |
+| 5 | Node.js | `sudo apt install nodejs` |
+
 ### macOS
 
 https://github.com/user-attachments/assets/4b940da3-4c5c-4e2f-a057-7d8e925489ca
