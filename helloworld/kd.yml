@@ -3,12 +3,21 @@ version: 3
 output:
     ver-android/app/src/main/kotlin/org/opengamestudio/ignore.kd.kt:
         type: kotlin
+
+    sdk-linux-x64/hw/src/nativeMain/kotlin/org/opengamestudio/ignore.kd.kt:
+        type: c++sdk
+    ver-linux-x64/src/ignore.kd.h:
+        type: c++hdr
+    ver-linux-x64/src/ignore.kd.cpp:
+        type: c++src
+
     sdk-mac-x64/hw/src/nativeMain/kotlin/org/opengamestudio/ignore.kd.kt:
         type: c++sdk
     ver-mac-x64/src/ignore.kd.h:
         type: c++hdr
     ver-mac-x64/src/ignore.kd.cpp:
         type: c++src
+
     sdk-windows-x64/hw/src/nativeMain/kotlin/org/opengamestudio/ignore.kd.kt:
         type: c++sdk
     ver-windows-x64/src/ignore.kd.h:
