@@ -40,6 +40,8 @@ Prerequisites:
 | 4 | CMake | `sudo apt install cmake` |
 | 5 | Node.js | `sudo apt install nodejs` |
 | 6 | OpenJDK | `sudo apt install openjdk-21-jdk` |
+| 7 | OpenGL | `sudo apt install libgl1-mesa-dev libglx-dev libopengl-dev` |
+| 8 | X keyboard | `sudo apt install libxkbcommon-dev` |
 
 ### macOS
 

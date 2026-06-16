@@ -10,7 +10,12 @@ find_package(
     QuickControls2
     Widgets
 )
-qt_standard_project_setup(REQUIRES 6.0)
+
+#qt_standard_project_setup(REQUIRES 6.0)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+include(GNUInstallDirs)
 
 # Приложение
 set(
