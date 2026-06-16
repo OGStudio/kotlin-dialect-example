@@ -35,6 +35,8 @@ qt_add_qml_module(
     hwL64
     URI helloworld
     VERSION 1.0
+    RESOURCE_PREFIX # Replace the default "/qt/qml" prefix with "/" when loading QML
+    NO_RESOURCE_TARGET_PATH # Strip "src/other/view" path when loading QML
     QML_FILES
     src/main/view/MainView.qml
     src/other/view/AppView.qml

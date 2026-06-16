@@ -30,8 +30,8 @@ int main(int argc, char *argv[]) {
     engine.rootContext()->setContextProperty("api", &api);
     engine.rootContext()->setContextProperty("F", &fobj);
     engine.rootContext()->setContextProperty("vm", &VM::singleton());
-    //engine.loadFromModule("helloworld", "MainView");
-    engine.loadFromModule("helloworld", "AppView");
+    //engine.loadFromModule("helloworld", "AppView");
+    engine.load(QUrl(QStringLiteral("qrc:/helloworld/AppView.qml")));
 
     return app.exec();
 }
