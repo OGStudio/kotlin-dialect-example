@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
 project(helloworld)
-set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 find_package(
@@ -63,9 +62,4 @@ target_link_libraries(
     Qt6::Quick
     Qt6::QuickControls2
     Qt6::Widgets
-)
-set_target_properties(
-    hwL64
-    PROPERTIES
-    INSTALL_RPATH "$ORIGIN/../../../sdk-linux-x64/hw/build/bin/native/releaseShared"
 )
