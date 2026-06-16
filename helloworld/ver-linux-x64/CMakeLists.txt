@@ -44,7 +44,7 @@ qt_add_qml_module(
 
 # SDK
 add_library(hw SHARED IMPORTED)
-set_target_properties(hw PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/sdk-linux-x64/hw/build/bin/native/releaseShared/libhw.so)
+set_target_properties(hw PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/../sdk-linux-x64/hw/build/bin/native/releaseShared/libhw.so)
 target_include_directories(
     hwL64
     PRIVATE
