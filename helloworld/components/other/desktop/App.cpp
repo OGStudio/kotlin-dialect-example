@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
         &engine,
         &QQmlApplicationEngine::objectCreated,
         &app,
-        [qmlPath](QObject *obj, const QUrl *objURL) {
+        [qmlPath](QObject *obj, const QUrl &objURL) {
             if (!obj && qmlPath == objURL) {
                 QCoreApplication::exit(-1); 
             }
