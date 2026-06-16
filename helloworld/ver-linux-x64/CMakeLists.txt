@@ -34,6 +34,7 @@ qt_add_executable(hwL64 ${SOURCES})
 qt_add_qml_module(
     hwL64
     URI helloworld
+    VERSION 1.0
     QML_FILES
     src/main/view/MainView.qml
     src/other/view/AppView.qml
