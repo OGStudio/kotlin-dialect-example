@@ -14,9 +14,13 @@ int main(int argc, char *argv[]) {
     QQmlApplicationEngine engine;
     QObject::connect(
         &engine,
-        &QQmlApplicationEngine::objectCreationFailed,
+        &QQmlApplicationEngine::objectCreated,
         &app,
-        []() { QCoreApplication::exit(-1); },
+        [url](QObject *obj, const QUrl *objURL) {
+            if (!obj && url == objURL) {
+                QCoreApplication::exit(-1); 
+            }
+        },
         Qt::QueuedConnection
     );
 
