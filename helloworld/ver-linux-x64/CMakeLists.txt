@@ -48,7 +48,7 @@ set_target_properties(hw PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/../sdk
 target_include_directories(
     hwL64
     PRIVATE
-    ${CMAKE_SOURCE_DIR}/../sdk-linux-x64/hw/build/bin/native/releaseShared
+    ${CMAKE_SOURCE_DIR}/sdk-linux-x64/hw/build/bin/native/releaseShared
     src
     src/main
     src/other
