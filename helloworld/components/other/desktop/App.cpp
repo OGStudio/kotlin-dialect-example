@@ -10,14 +10,15 @@
 int main(int argc, char *argv[]) {
     // Create Qt application
     QQuickStyle::setStyle("Fusion");
+    QUrl qmlPath(QStringLiteral("qrc:/helloworld/AppView.qml"));
     QApplication app(argc, argv);
     QQmlApplicationEngine engine;
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreated,
         &app,
-        [url](QObject *obj, const QUrl *objURL) {
-            if (!obj && url == objURL) {
+        [qmlPath](QObject *obj, const QUrl *objURL) {
+            if (!obj && qmlPath == objURL) {
                 QCoreApplication::exit(-1); 
             }
         },
@@ -35,7 +36,7 @@ int main(int argc, char *argv[]) {
     engine.rootContext()->setContextProperty("F", &fobj);
     engine.rootContext()->setContextProperty("vm", &VM::singleton());
     //engine.loadFromModule("helloworld", "AppView");
-    engine.load(QUrl(QStringLiteral("qrc:/helloworld/AppView.qml")));
+    engine.load(qmlPath);
 
     return app.exec();
 }
