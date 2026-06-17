@@ -32,21 +32,22 @@ qt_wrap_cpp(
 )
 qt_add_executable(hwL64 ${SOURCES})
 set_source_files_properties(
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/other/view/AppView.qml"
+    src/other/view/AppView.qml
     PROPERTIES
     QT_RESOURCE_ALIAS "helloworld/AppView.qml"
 )
 set_source_files_properties(
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/main/view/MainView.qml"
+    src/main/view/MainView.qml
     PROPERTIES
     QT_RESOURCE_ALIAS "helloworld/MainView.qml"
 )
 qt6_add_resources(hwL64 "app_qml"
     PREFIX "/"
     FILES
-        "${CMAKE_CURRENT_SOURCE_DIR}/src/other/view/AppView.qml"
-        "${CMAKE_CURRENT_SOURCE_DIR}/src/main/view/MainView.qml"
+        src/other/view/AppView.qml
+        src/main/view/MainView.qml
 )
+qt6_import_qml_plugins(hwL64)
 
 # SDK
 target_include_directories(
