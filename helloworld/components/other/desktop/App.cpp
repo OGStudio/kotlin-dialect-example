@@ -35,7 +35,6 @@ int main(int argc, char *argv[]) {
     engine.rootContext()->setContextProperty("api", &api);
     engine.rootContext()->setContextProperty("F", &fobj);
     engine.rootContext()->setContextProperty("vm", &VM::singleton());
-    //engine.loadFromModule("helloworld", "AppView");
     engine.load(qmlPath);
 
     return app.exec();

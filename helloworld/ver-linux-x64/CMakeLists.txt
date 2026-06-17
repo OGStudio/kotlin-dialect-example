@@ -31,15 +31,21 @@ qt_wrap_cpp(
     src/other/VM.h
 )
 qt_add_executable(hwL64 ${SOURCES})
-qt_add_qml_module(
-    hwL64
-    URI helloworld
-    VERSION 1.0
-    RESOURCE_PREFIX "/" # Replace the default "/qt/qml" prefix with "/" when loading QML
-    NO_RESOURCE_TARGET_PATH # # Strip "src/other/view" path when loading QML
-    QML_FILES
-    src/main/view/MainView.qml
-    src/other/view/AppView.qml
+set_source_files_properties(
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/other/view/AppView.qml"
+    PROPERTIES
+    QT_RESOURCE_ALIAS "helloworld/AppView.qml"
+)
+set_source_files_properties(
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/main/view/MainView.qml"
+    PROPERTIES
+    QT_RESOURCE_ALIAS "helloworld/MainView.qml"
+)
+qt6_add_resources(hwL64 "app_qml"
+    PREFIX "/"
+    FILES
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/other/view/AppView.qml"
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/main/view/MainView.qml"
 )
 
 # SDK
