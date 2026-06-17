@@ -1,3 +1,4 @@
 #!/bin/bash -e
 SDIR=$(cd "$(dirname "$0")" ; pwd -P)
+#export LD_LIBRARY_PATH="$SDIR/../sdk-linux-x64/hw/build/bin/native/releaseShared:${LD_LIBRARY_PATH}"
 $SDIR/../ver-linux-x64/build/hwL64

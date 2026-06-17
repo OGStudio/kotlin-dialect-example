@@ -53,6 +53,11 @@ target_include_directories(
     src/main
     src/other
 )
+set_target_properties(
+    hwL64
+    PROPERTIES
+    BUILD_RPATH "\\$ORIGIN/../../sdk-linux-x64/hw/build/bin/native/releaseShared"
+)
 
 # Link
 target_link_libraries(
