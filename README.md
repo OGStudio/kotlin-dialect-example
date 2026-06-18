@@ -36,12 +36,10 @@ Prerequisites:
 | --- | --- | --- |
 | 1 | Lubuntu 26.04 | Qt 6.5+ is required |
 | 2 | GCC | `sudo apt install build-essential` |
-| 3 | Qt6 | `sudo apt install qt6-declarative-dev qml6-module-qtquick-controls qml6-module-qtqml-workerscript` |
+| 3 | Qt6 | `sudo apt install qt6-declarative-dev` |
 | 4 | CMake | `sudo apt install cmake` |
 | 5 | Node.js | `sudo apt install nodejs` |
 | 6 | OpenJDK | `sudo apt install openjdk-21-jdk` |
-| 7 | OpenGL | `sudo apt install libgl1-mesa-dev libglx-dev libopengl-dev` |
-| 8 | X keyboard | `sudo apt install libxkbcommon-dev` |
 
 ### macOS
 
