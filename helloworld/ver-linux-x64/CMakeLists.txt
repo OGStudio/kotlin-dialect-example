@@ -10,12 +10,7 @@ find_package(
     QuickControls2
     Widgets
 )
-
-#qt_standard_project_setup(REQUIRES 6.0)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTORCC ON)
-include(GNUInstallDirs)
+qt_standard_project_setup(REQUIRES 6.5)
 
 # Приложение
 set(
@@ -31,23 +26,13 @@ qt_wrap_cpp(
     src/other/VM.h
 )
 qt_add_executable(hwL64 ${SOURCES})
-set_source_files_properties(
-    src/other/view/AppView.qml
-    PROPERTIES
-    QT_RESOURCE_ALIAS "helloworld/AppView.qml"
-)
-set_source_files_properties(
+qt_add_qml_module(
+    hwM64
+    URI helloworld
+    QML_FILES
     src/main/view/MainView.qml
-    PROPERTIES
-    QT_RESOURCE_ALIAS "helloworld/MainView.qml"
+    src/other/view/AppView.qml
 )
-qt6_add_resources(hwL64 "app_qml"
-    PREFIX "/"
-    FILES
-        src/other/view/AppView.qml
-        src/main/view/MainView.qml
-)
-qt6_import_qml_plugins(hwL64)
 
 # SDK
 target_include_directories(

@@ -34,9 +34,9 @@ Prerequisites:
 
 | № | Prerequisite | Details |
 | --- | --- | --- |
-| 1 | Ubuntu-based distribution | Tested on Lubuntu 22.04 |
+| 1 | Lubuntu 26.04 | Qt 6.5+ is required |
 | 2 | GCC | `sudo apt install build-essential` |
-| 3 | Qt6 (6.2+) | `sudo apt install qt6-declarative-dev qml6-module-qtquick-controls qml6-module-qtqml-workerscript` |
+| 3 | Qt6 | `sudo apt install qt6-declarative-dev qml6-module-qtquick-controls qml6-module-qtqml-workerscript` |
 | 4 | CMake | `sudo apt install cmake` |
 | 5 | Node.js | `sudo apt install nodejs` |
 | 6 | OpenJDK | `sudo apt install openjdk-21-jdk` |
