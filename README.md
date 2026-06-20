@@ -68,7 +68,7 @@ Prerequisites:
 
 | № | Prerequisite | Details |
 | --- | --- | --- |
-| 1 | Windows 11 | Configure symlinks: <br>1. Add to `~/.bash_profile`: `export MSYS="winsymlinks:nativestrict"` <br>2. Clone Kotlin dialect example repository with symlink support: `git clone -c core.symlinks=true github.com/OGStudio/kotlin-dialect-example` |
+| 1 | Windows 11 | Configure **symlinks**: <br>1. Add to `~/.bash_profile`: `export MSYS="winsymlinks:nativestrict"` <br>2. Clone Kotlin dialect example repository with **symlink** support: `git clone -c core.symlinks=true github.com/OGStudio/kotlin-dialect-example` |
 | 2 | [MSYS2](https://www.msys2.org) | Use UCRT64 shell |
 | 3 | [Qt6](https://wiki.qt.io/MSYS2) | `pacman -S mingw-w64-ucrt-x86_64-qt-creator` |
 | 4 | cmake | `pacman -S mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-ninja` |
