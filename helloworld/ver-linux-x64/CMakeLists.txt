@@ -27,7 +27,7 @@ qt_wrap_cpp(
 )
 qt_add_executable(hwL64 ${SOURCES})
 qt_add_qml_module(
-    hwM64
+    hwL64
     URI helloworld
     QML_FILES
     src/main/view/MainView.qml
