@@ -28,7 +28,7 @@ Instructions:
 
 ### Linux
 
-TODO: Video
+https://github.com/user-attachments/assets/80bb1702-7aaa-499e-9149-582646c5c16c
 
 Prerequisites:
 
