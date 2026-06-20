@@ -27,8 +27,8 @@ helloworld/
 │   └── hw/src/nativeMain/...       Generated ignore.kd.kt + symlinks → components/*/sdk/
 │                                    Builds → libhw.{so,dylib,dll}
 │
-├── ver-{linux,mac,windows}-x64/    Desktop verification/build projects
-│   ├── CMakeLists.txt              Qt6 CMake build
+├── ver-{linux,mac,windows}-x64/    Desktop projects
+│   ├── CMakeLists.txt              CMake
 │   └── src/                        Symlinks → components/*/desktop/
 │                                    + generated ignore.kd.{cpp,h}
 │
@@ -37,11 +37,6 @@ helloworld/
 │                                    + generated ignore.kd.kt + Compose UI
 │
 └── util/                           Build/launch scripts
-    ├── step/
-    │   ├── cloneKD    → git clone kotlin-dialect tool
-    │   ├── genKD      → node dist/app.js --file=kd.yml
-    │   ├── buildDesktopSDK → gradle linkReleaseSharedNative
-    │   └── buildDesktop→ cmake .. && cmake --build .
     ├── build-{linux,mac,windows,android}
     └── launch-{linux,mac,windows}
 ```
