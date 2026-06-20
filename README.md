@@ -12,6 +12,7 @@ application looks like
   * [Windows](#hw_windows)
 
 <a name="hw"/>
+
 ## Hello world
 
 `helloworld` example depicts how to alter text on button click
@@ -51,6 +52,7 @@ helloworld/
 ```
 
 <a name="hw_android"/>
+
 ### Android
 
 https://github.com/user-attachments/assets/e85859bd-7da8-46c3-9726-51f4e220ee4e
@@ -71,6 +73,7 @@ Instructions:
 | 6 | Press Run | |
 
 <a name="hw_linux"/>
+
 ### Linux
 
 https://github.com/user-attachments/assets/80bb1702-7aaa-499e-9149-582646c5c16c
@@ -87,6 +90,7 @@ Prerequisites:
 | 6 | OpenJDK | `sudo apt install openjdk-21-jdk` |
 
 <a name="hw_macos"/>
+
 ### macOS
 
 https://github.com/user-attachments/assets/4b940da3-4c5c-4e2f-a057-7d8e925489ca
@@ -107,6 +111,7 @@ Instructions (Intel):
 | 4 | Launch the application | `./util/launch-mac-x64`|
 
 <a name="hw_windows"/>
+
 ### Windows
 
 https://github.com/user-attachments/assets/54437654-c9db-42f7-b4ee-e8499db09120
