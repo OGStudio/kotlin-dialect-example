@@ -62,7 +62,7 @@ Instructions (Intel):
 
 ### Windows
 
-https://github.com/user-attachments/assets/23fcec69-a936-4a6f-bbc3-f20f6a3b55bb
+https://github.com/user-attachments/assets/54437654-c9db-42f7-b4ee-e8499db09120
 
 Prerequisites:
 
