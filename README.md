@@ -80,7 +80,7 @@ Instructions:
 
 | № | Step | Example |
 |---|---   |---      |
-| 1 | Open MSYS2 UCRT terminal as administrator | Make sure you cloned the repository with `-c core.symlinks=true`|
+| 1 | **As admin** open MSYS2 UCRT terminal | Make sure you cloned the repository with `-c core.symlinks=true`|
 | 2 | Go to `helloworld` directory | `cd helloworld` |
 | 3 | Build the application | `./util/build-windows-x64` |
 | 4 | Launch the application | `./util/launch-windows-x64`|
