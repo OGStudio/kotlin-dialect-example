@@ -11,6 +11,7 @@ find_package(
     Widgets
 )
 qt_standard_project_setup(REQUIRES 6.5)
+message(STATUS "Qt version: ${Qt6_VERSION}")
 
 # Приложение
 set(
