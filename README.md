@@ -74,7 +74,7 @@ Prerequisites:
 | 4 | cmake | `pacman -S mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-ninja` |
 | 5 | Node.js | `pacman -S mingw-w64-ucrt-x86_64-nodejs` |
 | 6 | dlltool | `pacman -S mingw-w64-ucrt-x86_64-toolchain` |
-| 7 | [OpenJDK](https://jdk.java.net/archive) | Install and unpack 21.0.2 version to `C:`, thenadd to `~/.bash_profile`: `export PATH="$PATH:/c/jdk-21.0.2"` |
+| 7 | [OpenJDK](https://jdk.java.net/archive) | Install and unpack 21.0.2 version to `C:`, then add to `~/.bash_profile`: `export PATH="$PATH:/c/jdk-21.0.2"` |
 
 Instructions:
 
