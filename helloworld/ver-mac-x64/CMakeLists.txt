@@ -2,29 +2,36 @@ cmake_minimum_required(VERSION 3.16)
 project(helloworld)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
-find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(
+    Qt6
+    REQUIRED
+    COMPONENTS
+    Quick
+    QuickControls2
+    Widgets
+)
 qt_standard_project_setup(REQUIRES 6.8)
 
 # Приложение
 set(
     SOURCES
-    src/App.cpp
     src/ignore.kd.cpp
-    src/VM.cpp
     src/main/main.cpp
+    src/other/App.cpp
+    src/other/VM.cpp
 )
 qt_wrap_cpp(
     SOURCES
     src/ignore.kd.h
-    src/VM.h
+    src/other/VM.h
 )
 qt_add_executable(hwM64 ${SOURCES})
 qt_add_qml_module(
     hwM64
     URI helloworld
     QML_FILES
-    src/AppView.qml
-    src/main/MainView.qml
+    src/main/view/MainView.qml
+    src/other/view/AppView.qml
 )
 
 # SDK
@@ -36,7 +43,15 @@ target_include_directories(
     ${CMAKE_SOURCE_DIR}/../sdk-mac-x64/hw/build/bin/native/releaseShared
     src
     src/main
+    src/other
 )
 
 # Link
-target_link_libraries(hwM64 PRIVATE Qt6::Quick hw)
+target_link_libraries(
+    hwM64
+    PRIVATE
+    hw
+    Qt6::Quick
+    Qt6::QuickControls2
+    Qt6::Widgets
+)

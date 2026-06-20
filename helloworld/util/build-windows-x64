@@ -5,13 +5,9 @@ source $SDIR/other
 
 DESKTOP=windows-x64
 
-$SDIR/gen-kd
-
 STEP=0
-# SDK
-source $T/copyWindowsSDK
+source $T/cloneKD
+source $T/genKD
 source $T/buildDesktopSDK
 source $T/genWindowsLib hw
-# App
-source $T/copyWindowsSrc
 source $T/buildDesktop

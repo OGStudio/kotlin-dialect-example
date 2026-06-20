@@ -1,0 +1,1 @@
+../../../../components/main/desktop/view/MainView.qml

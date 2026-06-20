@@ -1,3 +1,0 @@
-main/mainFun.kt
-main/mainProto.kt
-other.kt
