@@ -5,7 +5,46 @@ application looks like
 
 ## Hello world
 
-This example depicts how to alter text on button clicks
+`helloworld` example depicts how to alter text on button click
+
+`helloworld` structure:
+
+```
+helloworld/
+├── kd.yml                          Design: context fields + output paths
+│
+├── components/                     Hand-written source (single source of truth)
+│   ├── main/                       Core domain logic
+│   │   ├── android/  (main.kt, MainView.kt)
+│   │   ├── desktop/  (main.cpp/h, MainView.qml)
+│   │   └── sdk/      (mainProto.kt, mainShould.kt)
+│   └── other/                      App scaffolding (VM, entry point)
+│       ├── android/  (MainActivity.kt, VM.kt)
+│       ├── desktop/  (App.cpp, VM.cpp/h, KT.h, AppView.qml)
+│       └── sdk/      (other.kt)
+│
+├── sdk-{linux,mac,windows}-x64/    Kotlin/Native Gradle projects
+│   └── hw/src/nativeMain/...       Generated ignore.kd.kt + symlinks → components/*/sdk/
+│                                    Builds → libhw.{so,dylib,dll}
+│
+├── ver-{linux,mac,windows}-x64/    Desktop verification/build projects
+│   ├── CMakeLists.txt              Qt6 CMake build
+│   └── src/                        Symlinks → components/*/desktop/
+│                                    + generated ignore.kd.{cpp,h}
+│
+├── ver-android/                    Android Gradle project
+│   └── app/src/main/               Symlinks → components/*/{android,sdk}/
+│                                    + generated ignore.kd.kt + Compose UI
+│
+└── util/                           Build/launch scripts
+    ├── step/
+    │   ├── cloneKD    → git clone kotlin-dialect tool
+    │   ├── genKD      → node dist/app.js --file=kd.yml
+    │   ├── buildDesktopSDK → gradle linkReleaseSharedNative
+    │   └── buildDesktop→ cmake .. && cmake --build .
+    ├── build-{linux,mac,windows,android}
+    └── launch-{linux,mac,windows}
+```
 
 ### Android
 
