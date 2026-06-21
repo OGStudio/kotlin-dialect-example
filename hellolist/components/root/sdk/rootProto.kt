@@ -20,7 +20,7 @@ fun rootCtrl(): KDController {
 }
 
 fun rootCtrlCtx(): RootContext {
-    return RootProto.ctrl.context as MainContext
+    return RootProto.ctrl.context as RootContext
 }
 
 fun rootCtrlCtxField(): String {
