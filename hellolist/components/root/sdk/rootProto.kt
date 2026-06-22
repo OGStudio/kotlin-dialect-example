@@ -8,6 +8,7 @@ object RootProto {
         setupComponentDebugging(ctrl, "Root")
         arrayOf(
             ::rootShouldLaunch,
+            ::rootShouldResetItems,
             ::rootShouldResetVisibility,
         ).forEach { f ->
             ctrl.registerFunction { c -> f(c as RootContext) }

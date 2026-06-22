@@ -6,6 +6,12 @@ output:
 
 kotlin: package org.opengamestudio
 
+Item:
+    type: struct
+    fields:
+        id: Int
+        title: String
+
 RootContext:
     type: context
     fields:
@@ -13,3 +19,4 @@ RootContext:
         didLaunch: Bool
         didSetup: Bool
         isVisible: Bool
+        items: [Item]

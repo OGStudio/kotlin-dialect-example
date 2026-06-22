@@ -20,6 +20,24 @@ fun rootShouldLaunch(c: RootContext): RootContext {
     return c
 }
 
+// Reset items
+//
+// Conditions:
+// 1. User did click `Add item` button
+fun rootShouldResetItems(c: RootContext): RootContext {
+    /* 1 */ if (c.recentField == F.didClickAddItem) {
+        val item = Item()
+        item.id = c.items.size
+        item.name = "Item-${item.id}"
+        c.items += item
+        c.recentField = F.items
+        return c
+    }
+
+    c.recentField = F.none
+    return c
+}
+
 // Set main window visible
 //
 // Conditions:
