@@ -28,7 +28,7 @@ fun rootShouldResetItems(c: RootContext): RootContext {
     /* 1 */ if (c.recentField == F.didClickAddItem) {
         val item = Item()
         item.id = c.items.size
-        item.name = "Item-${item.id}"
+        item.title = "Item-${item.id}"
         c.items += item
         c.recentField = F.items
         return c
