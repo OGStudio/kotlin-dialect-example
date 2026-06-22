@@ -7,4 +7,5 @@ object VM {
     var androidContext: Context? = null
 
     var rootIsVisible = mutableStateOf(false)
+    var rootItems = mutableStateListOf<Item>()
 }

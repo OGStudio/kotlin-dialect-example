@@ -1,6 +1,7 @@
 package org.opengamestudio
 
 import androidx.compose.animation.*
+import androidx.compose.foundation.lazy.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -8,15 +9,18 @@ import androidx.compose.ui.*
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun RootView(vm: VM) {
+fun RootView(
+    modifier: Modifier,
+    vm: VM
+) {
     AnimatedVisibility(
         enter = fadeIn(),
         exit = fadeOut(),
-        modifier = Modifier,
+        modifier = modifier,
         visible = vm.rootIsVisible.value,
     ) {
         Box(
-            contentAlignment = Alignment.Center,
+            contentAlignment = Alignment.TopCenter,
             modifier = Modifier.fillMaxSize()
         ) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -25,7 +29,16 @@ fun RootView(vm: VM) {
                 OutlinedButton(
                     onClick = { rootSet(F.didClickAddItem, true) },
                 ) {
-                    Text("TODO Add item")
+                    Text("Add item")
+                }
+                Spacer(modifier = Modifier.height(10.dp))
+                LazyColumn {
+                    items(vm.rootItems) { item ->
+                        Text(
+                            modifier = Modifier.padding(16.dp),
+                            text = item.title
+                        )
+                    }
                 }
             }
         }

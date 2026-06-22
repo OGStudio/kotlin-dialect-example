@@ -7,6 +7,7 @@ object RootComponent {
         val vm = VM
         val oneliners = arrayOf(
             F.isVisible, { c: RC -> vm.rootIsVisible.value = c.isVisible },
+            F.items, { c: RC -> rootResetItems(vm, c.items) },
         )
         registerOneliners(rootCtrl(), oneliners)
     }

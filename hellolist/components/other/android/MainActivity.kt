@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.ui.*
 import org.opengamestudio.ui.theme.MyApplicationTheme
 
 class MainActivity: ComponentActivity() {
@@ -17,7 +20,12 @@ class MainActivity: ComponentActivity() {
 
         setContent {
             MyApplicationTheme {
-                RootView(VM)
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    RootView(
+                        modifier = Modifier.padding(innerPadding),
+                        VM
+                    )
+                }
             }
         }
     }
