@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(helloworld)
+project(hellolist)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 find_package(
@@ -10,13 +10,13 @@ find_package(
     QuickControls2
     Widgets
 )
-qt_standard_project_setup(REQUIRES 6.8)
+qt_standard_project_setup(REQUIRES 6.5)
 
 # Application
 set(
     SOURCES
     src/ignore.kd.cpp
-    src/main/main.cpp
+    src/root/root.cpp
     src/other/App.cpp
     src/other/VM.cpp
 )
@@ -25,32 +25,32 @@ qt_wrap_cpp(
     src/ignore.kd.h
     src/other/VM.h
 )
-qt_add_executable(hwM64 ${SOURCES})
+qt_add_executable(hlM64 ${SOURCES})
 qt_add_qml_module(
-    hwM64
-    URI helloworld
+    hlM64
+    URI hellolist
     QML_FILES
-    src/main/view/MainView.qml
+    src/root/view/RootView.qml
     src/other/view/AppView.qml
 )
 
 # SDK
-add_library(hw SHARED IMPORTED)
-set_target_properties(hw PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/../sdk-mac-x64/hw/build/bin/native/releaseShared/libhw.dylib)
+add_library(hl SHARED IMPORTED)
+set_target_properties(hl PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/../sdk-mac-x64/hl/build/bin/native/releaseShared/libhl.dylib)
 target_include_directories(
-    hwM64
+    hlM64
     PRIVATE
-    ${CMAKE_SOURCE_DIR}/../sdk-mac-x64/hw/build/bin/native/releaseShared
+    ${CMAKE_SOURCE_DIR}/../sdk-mac-x64/hl/build/bin/native/releaseShared
     src
-    src/main
+    src/root
     src/other
 )
 
 # Link
 target_link_libraries(
-    hwM64
+    hlM64
     PRIVATE
-    hw
+    hl
     Qt6::Quick
     Qt6::QuickControls2
     Qt6::Widgets

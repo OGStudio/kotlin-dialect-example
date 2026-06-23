@@ -1,0 +1,1 @@
+../../../components/root/desktop/root.cpp

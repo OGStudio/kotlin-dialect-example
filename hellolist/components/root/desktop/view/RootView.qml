@@ -16,7 +16,7 @@ Rectangle {
     Button {
         anchors.horizontalCenter: rootView.horizontalCenter
         onClicked: api.rootSet(F.didClickAddItem, true)
-        text: "TODO Add item"
+        text: "Add item"
         y: 100
     }
 }
