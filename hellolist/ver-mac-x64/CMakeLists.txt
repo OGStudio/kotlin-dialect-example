@@ -19,6 +19,7 @@ set(
     src/root/root.cpp
     src/root/rootEffect.cpp
     src/other/App.cpp
+    src/other/KT.cpp
     src/other/VM.cpp
 )
 qt_wrap_cpp(
