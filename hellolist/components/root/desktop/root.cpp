@@ -2,16 +2,17 @@
 #include <cstdio>
 #include <vector>
 
-#include "root.h"
 #include "ignore.kd.h"
+#include "root.h"
+#include "rootEffect.h"
 
 #define CB(code) std::make_any<std::function<void(RootContext)>>([&](RootContext c) { code })
 #define VM VM::singleton()
 
-
 RootComponent::RootComponent() {
     std::vector<std::any> oneliners = {
         F.isVisible, CB( VM.rootSetIsVisible(c.isVisible()); ),
+        F.items, CB( rootResetItems(VM/*, c.items()*/); ),
     };
     RootEffectRegistry::registerOneliners(KT.rootCtrl(), oneliners);
 }

@@ -17,6 +17,7 @@ set(
     SOURCES
     src/ignore.kd.cpp
     src/root/root.cpp
+    src/root/rootEffect.cpp
     src/other/App.cpp
     src/other/VM.cpp
 )
