@@ -14,7 +14,7 @@ class Item {
     public:
         Item(KTRef(Item) raw): raw(raw) { }
 
-        int id();
+        int id() const;
         QString title() const;
 
     private:
@@ -25,8 +25,8 @@ class Items {
     public:
         Items(KTLibRef(Array) kref): kref(kref) { }
 
-        Item operator[](int id);
-        int size();
+        Item operator[](int id) const;
+        int size() const;
 
     private:
         KTLibRef(Array) kref;

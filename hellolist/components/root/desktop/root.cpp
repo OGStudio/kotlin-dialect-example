@@ -12,7 +12,7 @@
 RootComponent::RootComponent() {
     std::vector<std::any> oneliners = {
         F.isVisible, CB( VM.rootSetIsVisible(c.isVisible()); ),
-        F.items, CB( rootSetItems(VM/*, c.items()*/); ),
+        F.items, CB( rootResetItems(VM, RootContext_items(KT.rootCtrlCtx())); ),
     };
     RootEffectRegistry::registerOneliners(KT.rootCtrl(), oneliners);
 }

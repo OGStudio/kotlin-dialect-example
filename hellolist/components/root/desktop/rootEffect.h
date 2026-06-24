@@ -4,6 +4,6 @@
 #include "KT.h"
 #include "VM.h"
 
-void rootResetItems(VM &vm);
+void rootResetItems(VM &vm, const Items &items);
 
 #endif // HL_ROOT_EFFECT_H

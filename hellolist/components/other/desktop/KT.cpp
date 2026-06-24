@@ -1,6 +1,6 @@
 #include "KT.h"
 
-int Item::id() {
+int Item::id() const {
     return KT.Item.get_id(raw);
 }
 
@@ -11,12 +11,12 @@ QString Item::title() const {
     return str;
 }
 
-Item Items::operator[](int id) {
+Item Items::operator[](int id) const {
     auto raw = KT.arrElement(kref, id);
     return Item(KT.anyAsItem(raw));
 }
 
-int Items::size() {
+int Items::size() const {
     return KT.arrSize(kref);
 }
 
