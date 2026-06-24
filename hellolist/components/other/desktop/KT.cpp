@@ -21,7 +21,6 @@ int Items::size() {
 }
 
 Items RootContext_items(KTRef(RootContext) kref) {
-    //auto rootCtx = KT.rootCtrlCtx();
     return Items(KT.RootContext.get_items(kref));
 }
 
