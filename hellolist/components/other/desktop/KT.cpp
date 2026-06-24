@@ -10,3 +10,18 @@ QString Item::title() const {
     KTSym->DisposeString(s);
     return str;
 }
+
+Item Items::operator[](int id) {
+    return KT.arrElement(kref, id);
+}
+
+int Items::size() {
+    return KT.arrSize(kref);
+}
+
+Items RootContext_items(KTRef(RootContext) kref) {
+    //auto rootCtx = KT.rootCtrlCtx();
+    auto kref = KT.RootContext.get_items(ctx);
+    return Items(kref);
+}
+

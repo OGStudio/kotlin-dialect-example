@@ -7,6 +7,7 @@
 #define KTSym libhl_symbols()
 
 #include <QString>
+#include <vector>
 
 class Item {
     public:
@@ -18,5 +19,18 @@ class Item {
     private:
         KTRef(Item) raw;
 };
+
+class Items {
+    public:
+        Items(KTRef(RootContext) kref): kref(kref) { }
+
+        Item operator[](int id);
+        int size();
+
+    private:
+        KTRef(RootContext) kref;
+};
+
+Items RootContext_items(KTRef(RootContext) kref);
 
 #endif // HL_KT_H

@@ -1,5 +1,10 @@
 package org.opengamestudio
 
+// TODO Generate
+fun arrElement(a: Array<Any?>, id: Int) = a.get(id)
+// TODO Generate
+fun arrSize(a: Array<Any?>) = a.size
+
 // Print each key/value processed by a component into console
 fun setupComponentDebugging(
     ctrl: KDController,
