@@ -12,7 +12,8 @@ QString Item::title() const {
 }
 
 Item Items::operator[](int id) {
-    return KT.arrElement(kref, id);
+    auto raw = KT.arrElement(kref, id);
+    return Item(KT.anyAsItem(raw));
 }
 
 int Items::size() {
@@ -21,7 +22,6 @@ int Items::size() {
 
 Items RootContext_items(KTRef(RootContext) kref) {
     //auto rootCtx = KT.rootCtrlCtx();
-    auto kref = KT.RootContext.get_items(ctx);
-    return Items(kref);
+    return Items(KT.RootContext.get_items(kref));
 }
 

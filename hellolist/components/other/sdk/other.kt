@@ -1,6 +1,8 @@
 package org.opengamestudio
 
 // TODO Generate
+fun anyAsItem(item: Any?) = item as Item
+// TODO Generate
 fun arrElement(a: Array<Any?>, id: Int) = a.get(id)
 // TODO Generate
 fun arrSize(a: Array<Any?>) = a.size

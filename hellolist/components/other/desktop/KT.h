@@ -3,6 +3,7 @@
 
 #include "libhl_api.h"
 #define KT libhl_symbols()->kotlin.root.org.opengamestudio
+#define KTLibRef(NAME) libhl_kref_kotlin_##NAME
 #define KTRef(NAME) libhl_kref_org_opengamestudio_##NAME
 #define KTSym libhl_symbols()
 
@@ -22,13 +23,13 @@ class Item {
 
 class Items {
     public:
-        Items(KTRef(RootContext) kref): kref(kref) { }
+        Items(KTLibRef(Array) kref): kref(kref) { }
 
         Item operator[](int id);
         int size();
 
     private:
-        KTRef(RootContext) kref;
+        KTLibRef(Array) kref;
 };
 
 Items RootContext_items(KTRef(RootContext) kref);
