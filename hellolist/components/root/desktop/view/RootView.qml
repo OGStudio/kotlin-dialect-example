@@ -19,4 +19,16 @@ Rectangle {
         text: "Add item"
         y: 100
     }
+
+    ListView {
+        anchors.horizontalCenter: rootView.horizontalCenter
+        y: 150
+        width: parent.width
+        height: parent.height - 150
+        model: vm.rootItems
+        delegate: Text {
+            text: modelData
+            padding: 8
+        }
+    }
 }

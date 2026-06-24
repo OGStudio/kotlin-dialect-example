@@ -4,7 +4,6 @@
 #include "KT.h"
 #include "VM.h"
 
-// Accept items
-void rootResetItems(const VM &vm);
+void rootResetItems(VM &vm);
 
 #endif // HL_ROOT_EFFECT_H
