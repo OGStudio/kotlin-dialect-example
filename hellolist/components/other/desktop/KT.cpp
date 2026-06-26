@@ -14,13 +14,11 @@ QString Item::title() const {
     return str;
 }
 
-KTRef(Item) Items::rawItemAt(int id) const {
-    auto raw = KT.arrElement(kref, id);
-    return KT.anyAsItem(raw);
-}
-
-int Items::size() const {
-    return KT.arrSize(kref);
+Items::Items(KTLibRef(Array) kref) {
+    int n = KT.arrSize(kref);
+    for (int i = 0; i < n; ++i) {
+        append(new Item(KT.anyAsItem(KT.arrElement(kref, i))));
+    }
 }
 
 Items RootContext_items(KTRef(RootContext) kref) {
