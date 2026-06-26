@@ -25,6 +25,7 @@ set(
 qt_wrap_cpp(
     SOURCES
     src/ignore.kd.h
+    src/other/KT.h
     src/other/VM.h
 )
 qt_add_executable(hlM64 ${SOURCES})

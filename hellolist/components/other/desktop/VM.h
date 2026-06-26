@@ -1,8 +1,11 @@
 #ifndef HL_VM_H
 #define HL_VM_H
 
+#include <QList>
 #include <QObject>
-#include <QStringList>
+#include <QQmlListProperty>
+
+#include "KT.h"
 
 class VM: public QObject {
     Q_OBJECT
@@ -15,7 +18,7 @@ class VM: public QObject {
     )
 
     Q_PROPERTY(
-        QStringList rootItems
+        QQmlListProperty<Item> rootItems
         READ rootItems
         NOTIFY rootDidChangeItems
     )
@@ -26,7 +29,7 @@ class VM: public QObject {
     public:
         VM(VM const &) = delete;
         void operator=(VM const &) = delete;
-        virtual ~VM() { }
+        virtual ~VM();
         static VM &singleton() {
             static VM instance;
             return instance;
@@ -34,19 +37,22 @@ class VM: public QObject {
 
     public:
         bool rootIsVisible() const;
-        QStringList rootItems() const;
+
+        QQmlListProperty<Item> rootItems() const;
+        static Item *rootItemsAt(QQmlListProperty<Item> *list, qsizetype index);
+        static qsizetype rootItemsCount(QQmlListProperty<Item> *list);
 
     public slots:
         void rootSetIsVisible(bool value);
-        void rootSetItems(QStringList items);
+        void rootSetItems(QList<Item*> items);
 
     signals:
         void rootDidChangeIsVisible(bool value);
-        void rootDidChangeItems(QStringList items);
+        void rootDidChangeItems();
 
     private:
         bool _rootIsVisible;
-        QStringList _rootItems;
+        QList<Item*> _rootItems;
 };
 
 #endif // HL_VM_H

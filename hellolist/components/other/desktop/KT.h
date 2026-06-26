@@ -7,12 +7,16 @@
 #define KTRef(NAME) libhl_kref_org_opengamestudio_##NAME
 #define KTSym libhl_symbols()
 
+#include <QObject>
 #include <QString>
-#include <vector>
 
-class Item {
+class Item : public QObject {
+    Q_OBJECT
+    Q_PROPERTY(int id READ id CONSTANT)
+    Q_PROPERTY(QString title READ title CONSTANT)
+
     public:
-        Item(KTRef(Item) raw): raw(raw) { }
+        Item(KTRef(Item) raw, QObject *parent = nullptr);
 
         int id() const;
         QString title() const;
@@ -25,7 +29,7 @@ class Items {
     public:
         Items(KTLibRef(Array) kref): kref(kref) { }
 
-        Item operator[](int id) const;
+        KTRef(Item) rawItemAt(int id) const;
         int size() const;
 
     private:

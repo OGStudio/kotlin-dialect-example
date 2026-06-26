@@ -27,7 +27,7 @@ Rectangle {
         height: parent.height - 150
         model: vm.rootItems
         delegate: Text {
-            text: modelData
+            text: modelData.title
             padding: 8
         }
     }

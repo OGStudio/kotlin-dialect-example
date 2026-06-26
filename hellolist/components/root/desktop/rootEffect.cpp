@@ -1,7 +1,5 @@
 #include <cstdio>
 
-#include <QStringList>
-
 #include "ignore.kd.h"
 #include "rootEffect.h"
 
@@ -9,11 +7,10 @@ void rootResetItems(
     VM &vm,
     const Items &items
 ) {
-    QStringList titles;
+    QList<Item*> itemList;
     for (int i = 0; i < items.size(); ++i) {
-        auto item = items[i];
-        titles.append(item.title());
+        itemList.append(new Item(items.rawItemAt(i)));
     }
-    vm.rootSetItems(titles);
+    vm.rootSetItems(itemList);
 }
 

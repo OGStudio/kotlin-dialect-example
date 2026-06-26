@@ -1,5 +1,8 @@
 #include "KT.h"
 
+Item::Item(KTRef(Item) raw, QObject *parent)
+    : QObject(parent), raw(raw) { }
+
 int Item::id() const {
     return KT.Item.get_id(raw);
 }
@@ -11,9 +14,9 @@ QString Item::title() const {
     return str;
 }
 
-Item Items::operator[](int id) const {
+KTRef(Item) Items::rawItemAt(int id) const {
     auto raw = KT.arrElement(kref, id);
-    return Item(KT.anyAsItem(raw));
+    return KT.anyAsItem(raw);
 }
 
 int Items::size() const {
