@@ -20,8 +20,3 @@ Items::Items(KTLibRef(Array) kref) {
         append(new Item(KT.anyAsItem(KT.arrElement(kref, i))));
     }
 }
-
-Items RootContext_items(KTRef(RootContext) kref) {
-    return Items(KT.RootContext.get_items(kref));
-}
-

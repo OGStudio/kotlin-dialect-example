@@ -31,6 +31,4 @@ class Items : public QList<Item*> {
         Items(KTLibRef(Array) kref);
 };
 
-Items RootContext_items(KTRef(RootContext) kref);
-
 #endif // HL_KT_H
