@@ -6,6 +6,6 @@ if [ ! -d "$KD_DIR" ]; then
   git clone $KD_URL $KD_DIR
 fi
 cd $KD_DIR
-git fetch
 #git checkout -f 3.2
 git checkout -f cpparr
+git pull
