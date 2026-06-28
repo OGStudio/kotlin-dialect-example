@@ -14,9 +14,3 @@ QString Item::title() const {
     return str;
 }
 
-Items::Items(KTLibRef(Array) kref) {
-    int n = KT.arrSize(kref);
-    for (int i = 0; i < n; ++i) {
-        append(new Item(KT.anyAsItem(KT.arrElement(kref, i))));
-    }
-}
