@@ -7,7 +7,6 @@
 #define KTRef(NAME) libhl_kref_org_opengamestudio_##NAME
 #define KTSym libhl_symbols()
 
-#include <QList>
 #include <QObject>
 #include <QString>
 
