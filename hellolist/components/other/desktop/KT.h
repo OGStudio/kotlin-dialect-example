@@ -26,14 +26,4 @@ class Item : public QObject {
         KTRef(Item) raw;
 };
 
-class Items : public QList<Item*> {
-    public:
-        Items(KTLibRef(Array) kref) {
-            int n = KT.arrSize(kref);
-            for (int i = 0; i < n; ++i) {
-                append(new Item(KT.anyAsItem(KT.arrElement(kref, i))));
-            }
-        }
-};
-
 #endif // HL_KT_H
