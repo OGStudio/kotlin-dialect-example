@@ -1,3 +1,4 @@
+#include "ignore.kd.h"
 #include "KT.h"
 
 Item::Item(KTRef(Item) raw, QObject *parent)

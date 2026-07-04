@@ -7,22 +7,4 @@
 #define KTRef(NAME) libhl_kref_org_opengamestudio_##NAME
 #define KTSym libhl_symbols()
 
-#include <QObject>
-#include <QString>
-
-class Item : public QObject {
-    Q_OBJECT
-    Q_PROPERTY(int id READ id CONSTANT)
-    Q_PROPERTY(QString title READ title CONSTANT)
-
-    public:
-        Item(KTRef(Item) raw, QObject *parent = nullptr);
-
-        int id() const;
-        QString title() const;
-
-    private:
-        KTRef(Item) raw;
-};
-
 #endif // HL_KT_H

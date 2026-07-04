@@ -5,6 +5,7 @@
 #include <QObject>
 #include <QQmlListProperty>
 
+#include "ignore.kd.h"
 #include "KT.h"
 
 class VM: public QObject {
