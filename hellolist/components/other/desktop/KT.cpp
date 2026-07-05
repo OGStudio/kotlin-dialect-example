@@ -1,9 +1,6 @@
 #include "ignore.kd.h"
 #include "KT.h"
 
-Item::Item(KTRef(Item) raw, QObject *parent)
-    : QObject(parent), raw(raw) { }
-
 int Item::id() const {
     return KT.Item.get_id(raw);
 }
