@@ -1,1 +1,0 @@
-../../../components/other/desktop/KT.cpp
