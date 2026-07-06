@@ -4,6 +4,7 @@ do-test*
 .DS_Store
 emb64.kt
 .gradle
+*.hprof
 .idea
 ignore.*
 kd.kt
