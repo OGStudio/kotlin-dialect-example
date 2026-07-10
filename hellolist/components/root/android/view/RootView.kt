@@ -1,11 +1,13 @@
 package org.opengamestudio
 
 import androidx.compose.animation.*
+import androidx.compose.foundation.background
 import androidx.compose.foundation.lazy.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.*
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.*
 
 @Composable
@@ -21,7 +23,9 @@ fun RootView(
     ) {
         Box(
             contentAlignment = Alignment.TopCenter,
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color(0xFFFAFAFA))
         ) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Text("TODO list")

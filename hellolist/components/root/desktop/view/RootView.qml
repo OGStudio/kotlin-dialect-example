@@ -5,7 +5,7 @@ import QtQuick.Layouts
 Rectangle {
     id: rootView
     visible: vm.rootIsVisible
-    color: "transparent"
+    color: "#FAFAFA"
 
     // Use a Column for the static header items to size naturally
     Column {
@@ -38,6 +38,7 @@ Rectangle {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.topMargin: 20
+        anchors.bottomMargin: 16
         anchors.leftMargin: 16
         anchors.rightMargin: 16
         model: vm.rootItems
