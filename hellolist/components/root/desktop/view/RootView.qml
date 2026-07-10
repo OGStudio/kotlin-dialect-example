@@ -37,8 +37,7 @@ Rectangle {
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.topMargin: 20
-        anchors.bottomMargin: 16
+        anchors.topMargin: 10
         anchors.leftMargin: 16
         anchors.rightMargin: 16
         model: vm.rootItems
@@ -46,6 +45,10 @@ Rectangle {
         clip: true // Prevents items from overflowing visually when scrolled
         delegate: RootViewItem {
             width: listView.width
+        }
+        footer: Item {
+            width: listView.width
+            height: 16
         }
     }
 }
