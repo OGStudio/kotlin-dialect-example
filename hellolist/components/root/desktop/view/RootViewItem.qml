@@ -5,7 +5,7 @@ import QtQuick.Layouts
 Rectangle {
     id: rootViewItem
     required property var model
-    height: contentLayout.implicitHeight + 40
+    height: contentLayout.implicitHeight + 40 // Calculated cleanly from content
     radius: 12
     color: "white"
     border.color: "#EEEEEE"
@@ -13,7 +13,10 @@ Rectangle {
 
     RowLayout {
         id: contentLayout
-        anchors.fill: parent
+        // Safely anchor without causing height circular dependencies
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: parent.top
         anchors.margins: 20
         spacing: 8
 
