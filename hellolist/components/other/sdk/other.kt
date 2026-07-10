@@ -44,10 +44,8 @@ fun setupComponentDebugging(
     prefix: String
 ) {
     ctrl.registerCallback { c ->
-        //val value = c.field<String>(c.recentField)
-        //val strval = debugString(value)
-        //val strval = "${value}"
-        val strval = "TODO"
+        val anyval = c.fieldAny(c.recentField)
+        val strval = debugString(anyval)
         println("ИГР $prefix k/v: '${c.recentField}'/'$strval'")
     }
 }
