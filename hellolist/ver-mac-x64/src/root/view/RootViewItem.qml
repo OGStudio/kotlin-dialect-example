@@ -1,0 +1,1 @@
+../../../../components/root/desktop/view/RootViewItem.qml

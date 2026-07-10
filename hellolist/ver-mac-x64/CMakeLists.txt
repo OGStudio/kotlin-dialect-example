@@ -32,6 +32,7 @@ qt_add_qml_module(
     URI hellolist
     QML_FILES
     src/root/view/RootView.qml
+    src/root/view/RootViewItem.qml
     src/other/view/AppView.qml
 )
 

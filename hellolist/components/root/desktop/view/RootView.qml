@@ -1,34 +1,42 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 
 Rectangle {
     id: rootView
     visible: vm.rootIsVisible
+    color: "transparent"
 
-    Text {
+    ColumnLayout {
         anchors.horizontalCenter: rootView.horizontalCenter
-        font.bold: true
-        font.pointSize: 24
-        text: "TODO list"
-        y: 30
-    }
+        anchors.top: rootView.top
+        anchors.topMargin: 30
+        spacing: 10
 
-    Button {
-        anchors.horizontalCenter: rootView.horizontalCenter
-        onClicked: api.rootSet(F.didClickAddItem, true)
-        text: "Add item"
-        y: 100
-    }
+        Text {
+            text: "TODO list"
+            font.bold: true
+            font.pointSize: 24
+            Layout.alignment: Qt.AlignHCenter
+        }
 
-    ListView {
-        anchors.horizontalCenter: rootView.horizontalCenter
-        y: 150
-        width: parent.width
-        height: parent.height - 150
-        model: vm.rootItems
-        delegate: Text {
-            text: modelData.title
-            padding: 8
+        Button {
+            text: "Add item"
+            onClicked: api.rootSet(F.didClickAddItem, true)
+            Layout.alignment: Qt.AlignHCenter
+        }
+
+        ListView {
+            id: listView
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.leftMargin: 16
+            Layout.rightMargin: 16
+            model: vm.rootItems
+            spacing: 8
+            delegate: RootViewItem {
+                width: listView.width
+            }
         }
     }
 }
