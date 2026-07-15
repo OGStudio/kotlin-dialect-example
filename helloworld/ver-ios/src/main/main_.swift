@@ -1,1 +1,1 @@
-../../../../../../../components/main/ios/main_.swift
+../../../components/main/ios/main_.swift

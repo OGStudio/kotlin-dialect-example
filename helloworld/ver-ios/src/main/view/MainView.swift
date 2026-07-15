@@ -1,1 +1,1 @@
-../../../../../../../components/main/ios/view/MainView.swift
+../../../../components/main/ios/view/MainView.swift
