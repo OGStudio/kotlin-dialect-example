@@ -7,6 +7,7 @@ application looks like
 
 * [Hello world](#hw)
   * [Android](#hw_android)
+  * [iOS](#hw_ios)
   * [Linux](#hw_linux)
   * [macOS](#hw_macos)
   * [Windows](#hw_windows)
@@ -73,6 +74,15 @@ Instructions:
 | 4 | Launch Android Studio | |
 | 5 | Open `helloworld/ver-android` project | |
 | 6 | Press Run | |
+
+<a name="hw_ios"/>
+
+### iOS
+
+Fill local.properties with sdk path (it's gitignored)
+
+TODO 
+
 
 <a name="hw_linux"/>
 
