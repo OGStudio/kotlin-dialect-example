@@ -9,3 +9,4 @@ cd $SDIR/../sdk-ios
 ./gradlew assembleHwReleaseXCFramework
 cd $BUILD_DIR
 zip -r hw.xcframework.zip hw.xcframework
+ln -sf $BUILD_DIR/hw.xcframework.zip $SDIR/../ver-ios/app/local/hw/hw.xcframework.zip
