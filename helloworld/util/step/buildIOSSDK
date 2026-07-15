@@ -1,0 +1,11 @@
+#!/bin/bash
+
+STEP=$((STEP+1))
+echo -e "\n> > > > Step №$STEP. Build SDK for iOS"
+
+BUILD_DIR=$SDIR/../sdk-ios/hw/build/XCFrameworks/release
+
+cd $SDIR/../sdk-ios
+./gradlew assembleHwReleaseXCFramework
+cd $BUILD_DIR
+zip -r hw.xcframework.zip hw.xcframework

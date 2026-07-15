@@ -1,0 +1,10 @@
+#!/bin/bash -e
+SDIR=$(cd "$(dirname "$0")" ; pwd -P)
+T=$SDIR/step
+source $SDIR/other
+
+STEP=0
+source $T/cloneKD
+source $T/genKD
+source $T/buildIOSSDK
+source $T/genIOSProject
