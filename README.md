@@ -1,7 +1,7 @@
 # Kotlin Dialect examples
 
-This repository contains example project to showcase how Kotlin Dialect
-application looks like
+This repository contains example projects to showcase how applications
+with Kotlin Dialect operate
 
 # Table of contents
 
@@ -13,6 +13,7 @@ application looks like
   * [Windows](#hw_windows)
 * [Hello list](#hl)
   * [Android](#hl_android)
+  * [macOS](#hl_macos)
 
 <a name="hw"/>
 
@@ -153,13 +154,21 @@ Instructions:
 
 ## Hello list
 
-`helloworld` example depicts how to alter text on button click
+`hellolist` example depicts how to add items to a list
 
 TODO Structure
 
 <a name="hl_android"/>
 
 ### Android
+
+TODO Video
+
+TODO Instructions
+
+<a name="hl_macos"/>
+
+### macOS
 
 TODO Video
 
