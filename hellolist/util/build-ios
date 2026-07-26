@@ -6,16 +6,5 @@ source $SDIR/other
 STEP=0
 source $T/cloneKD
 source $T/genKD
-
-BUILD_DIR=$SDIR/../sdk-ios/hl/build/XCFrameworks/release
-
-# Build and archive KMP code into a framework for iOS
-cd $SDIR/../sdk-ios
-./gradlew assembleHlReleaseXCFramework
-cd $BUILD_DIR
-zip -r hl.xcframework.zip hl.xcframework
-ln -sf $BUILD_DIR/hl.xcframework.zip $SDIR/../ver-ios/app/local/hl/hl.xcframework.zip
-
-# Generate iOS project
-cd $SDIR/../ver-ios/app
-xcodegen
+source $T/buildIOSSDK hl
+source $T/genIOSProject

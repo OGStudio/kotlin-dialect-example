@@ -1,12 +1,13 @@
 #!/bin/bash
 
 STEP=$((STEP+1))
-echo -e "\n> > > > Step №$STEP. Build SDK for iOS"
+echo -e "\n> > > > Step №$STEP. Build SDK for iOS: $1"
 
-BUILD_DIR=$SDIR/../sdk-ios/hw/build/XCFrameworks/release
+MODULE=$1
+BUILD_DIR=$SDIR/../sdk-ios/$MODULE/build/XCFrameworks/release
 
 cd $SDIR/../sdk-ios
-./gradlew assembleHwReleaseXCFramework
+./gradlew assemble${MODULE^}ReleaseXCFramework
 cd $BUILD_DIR
-zip -r hw.xcframework.zip hw.xcframework
-ln -sf $BUILD_DIR/hw.xcframework.zip $SDIR/../ver-ios/app/local/hw/hw.xcframework.zip
+zip -r $MODULE.xcframework.zip $MODULE.xcframework
+ln -sf $BUILD_DIR/$MODULE.xcframework.zip $SDIR/../ver-ios/app/local/$MODULE/$MODULE.xcframework.zip

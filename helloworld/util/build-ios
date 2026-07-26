@@ -6,5 +6,5 @@ source $SDIR/other
 STEP=0
 source $T/cloneKD
 source $T/genKD
-source $T/buildIOSSDK
+source $T/buildIOSSDK hw
 source $T/genIOSProject
