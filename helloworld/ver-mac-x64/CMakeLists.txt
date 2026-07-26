@@ -12,7 +12,7 @@ find_package(
 )
 qt_standard_project_setup(REQUIRES 6.8)
 
-# Приложение
+# Application
 set(
     SOURCES
     src/ignore.kd.cpp

@@ -1,0 +1,19 @@
+name: HelloList
+packages:
+    hl:
+        path: local/hl
+options:
+    bundleIdPrefix: org.opengamestudio
+targets:
+    hellolist:
+        type: application
+        platform: iOS
+        deploymentTarget: "15.0"
+        dependencies:
+           - package: hl
+        sources:
+            - path: "../src"
+        settings:
+            base:
+                DEVELOPMENT_TEAM: S3NW8F382K
+                INFOPLIST_FILE: Info.plist

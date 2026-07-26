@@ -1,15 +1,22 @@
 # Kotlin Dialect examples
 
-This repository contains example project to showcase how Kotlin Dialect
-application looks like
+This repository contains example projects to showcase how applications
+with Kotlin Dialect operate
 
 # Table of contents
 
 * [Hello world](#hw)
   * [Android](#hw_android)
+  * [iOS](#hw_ios)
   * [Linux](#hw_linux)
   * [macOS](#hw_macos)
   * [Windows](#hw_windows)
+* [Hello list](#hl)
+  * [Android](#hl_android)
+  * [iOS](#hl_ios)
+  * [Linux](#hl_linux)
+  * [macOS](#hl_macos)
+  * [Windows](#hl_windows)
 
 <a name="hw"/>
 
@@ -71,6 +78,15 @@ Instructions:
 | 4 | Launch Android Studio | |
 | 5 | Open `helloworld/ver-android` project | |
 | 6 | Press Run | |
+
+<a name="hw_ios"/>
+
+### iOS
+
+Fill local.properties with sdk path (it's gitignored)
+
+TODO 
+
 
 <a name="hw_linux"/>
 
@@ -136,3 +152,27 @@ Instructions:
 | 2 | Go to `helloworld` directory | `cd helloworld` |
 | 3 | Build the application | `./util/build-windows-x64` |
 | 4 | Launch the application | `./util/launch-windows-x64`|
+
+<a name="hl"/>
+
+## Hello list
+
+`hellolist` example depicts how to add items to a list
+
+TODO Structure
+
+<a name="hl_android"/>
+
+### Android
+
+TODO Video
+
+TODO Instructions
+
+<a name="hl_macos"/>
+
+### macOS
+
+TODO Video
+
+TODO Instructions

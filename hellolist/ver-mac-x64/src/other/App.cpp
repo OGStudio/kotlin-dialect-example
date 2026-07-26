@@ -1,0 +1,1 @@
+../../../components/other/desktop/App.cpp

@@ -3,6 +3,10 @@ version: 3
 output:
     ver-android/app/src/main/kotlin/org/opengamestudio/ignore.kd.kt:
         type: kotlin
+    sdk-ios/hw/src/commonMain/kotlin/org/opengamestudio/ignore.kd.kt:
+        type: kotlin
+    ver-ios/src/ignore.kd.swift:
+        type: swift
     sdk-linux-x64/hw/src/nativeMain/kotlin/org/opengamestudio/ignore.kd.kt:
         type: c++sdk
     ver-linux-x64/src/ignore.kd.h:
@@ -25,6 +29,7 @@ output:
 c++sdk: package org.opengamestudio
 c++sdk: import kotlinx.cinterop.*
 kotlin: package org.opengamestudio
+swift: import hw
 
 MainContext:
     type: context

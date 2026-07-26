@@ -4,6 +4,7 @@ do-test*
 .DS_Store
 emb64.kt
 .gradle
+*.hprof
 .idea
 ignore.*
 kd.kt
@@ -14,3 +15,5 @@ local.properties
 ver-windows-x64/src/*.h
 ver-windows-x64/src/*.cpp
 ver-windows-x64/src/*.qml
+*.xcodeproj
+*.zip
