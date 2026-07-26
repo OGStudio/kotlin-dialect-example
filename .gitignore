@@ -16,3 +16,4 @@ ver-windows-x64/src/*.h
 ver-windows-x64/src/*.cpp
 ver-windows-x64/src/*.qml
 *.xcodeproj
+*.zip
