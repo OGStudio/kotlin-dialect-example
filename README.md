@@ -13,7 +13,10 @@ with Kotlin Dialect operate
   * [Windows](#hw_windows)
 * [Hello list](#hl)
   * [Android](#hl_android)
+  * [iOS](#hl_ios)
+  * [Linux](#hl_linux)
   * [macOS](#hl_macos)
+  * [Windows](#hl_windows)
 
 <a name="hw"/>
 
