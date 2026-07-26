@@ -4,10 +4,11 @@ STEP=$((STEP+1))
 echo -e "\n> > > > Step №$STEP. Build SDK for iOS: $1"
 
 MODULE=$1
+MODULE_CAP=$(echo "${MODULE:0:1}" | tr '[:lower:]' '[:upper:]')${MODULE:1}
 BUILD_DIR=$SDIR/../sdk-ios/$MODULE/build/XCFrameworks/release
 
 cd $SDIR/../sdk-ios
-./gradlew assemble${MODULE^}ReleaseXCFramework
+./gradlew assemble${MODULE_CAP}ReleaseXCFramework
 cd $BUILD_DIR
 zip -r $MODULE.xcframework.zip $MODULE.xcframework
 ln -sf $BUILD_DIR/$MODULE.xcframework.zip $SDIR/../ver-ios/app/local/$MODULE/$MODULE.xcframework.zip
